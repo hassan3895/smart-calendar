@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Calendar</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="Hassan's Calendar-container">
+    <div class="header">
+      <button id="prevBtn">←</button>
+      <h2 id="monthYear"></h2>
+      <button id="nextBtn">→</button>
+    </div>
+    <div class="year-selector">
+      <label for="yearSelect">Go to Year:</label>
+      <select id="yearSelect"></select>
+    </div>
+    <div class="calendar">
+      <div class="day-names">
+        <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+        <div>Thu</div><div>Fri</div><div>Sat</div>
+      </div>
+      <div id="calendarDays" class="days-grid"></div>
+    </div>
+  </div>
+
+  <button id="addEventBtn">+</button>
+
+  <div id="eventPopup" class="popup hidden">
+    <div class="popup-content">
+      <h3 id="popupTitle">New Event</h3>
+      <input type="text" placeholder="Title" id="eventTitle"/>
+      <label>Start:</label>
+      <input type="datetime-local" id="eventStart"/>
+      <label>End:</label>
+      <input type="datetime-local" id="eventEnd"/>
+      <div class="popup-buttons">
+        <button id="saveEvent">Save</button>
+        <button id="closePopup">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="event-history">
+    <h3>Event History</h3>
+    <ul id="eventList"></ul>
+  </div>
+
+  <!-- Royalty‑free ringtone audio -->
+  <audio id="reminderSound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_xxxxx.mp3?filename=ringtone-xxx.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>

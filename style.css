@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #6d6d6e;
+  margin: 0;
+  padding: 20px;
+}
+
+.calendar-container {
+  max-width: 600px;
+  margin: auto;
+  background: rgb(139, 139, 139);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h2 {
+  margin: 0;
+}
+
+button {
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Orange style for Save, Edit, Delete buttons */
+#saveEvent,
+button[onclick^="editEvent"],
+button[onclick^="deleteEvent"] {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 14px;
+}
+
+#saveEvent:hover,
+button[onclick^="editEvent"]:hover,
+button[onclick^="deleteEvent"]:hover {
+  background-color: darkorange;
+}
+
+.year-selector {
+  margin: 15px 0;
+  text-align: center;
+}
+
+select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.calendar {
+  text-align: center;
+}
+
+.day-names {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  background: #aaa9a9;
+  padding: 10px 0;
+}
+
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding-top: 10px;
+}
+
+.days-grid div {
+  padding: 15px 0;
+  background: #494747;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.days-grid div.today {
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+}
+
+.days-grid div.selected {
+  background-color: #2196f3;
+  color: white;
+}
+
+/* Floating + Button */
+#addEventBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #4caf50;
+  color: rgb(207, 207, 207);
+  font-size: 28px;
+  border: none;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.popup-content input {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 8px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Event History */
+.event-history {
+  max-width: 600px;
+  margin: 30px auto;
+  background: rgb(73, 70, 70);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.event-history ul {
+  list-style: none;
+  padding: 0;
+}
+
+.event-history li {
+  background: #c9c9c9;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
